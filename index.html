@@ -17,10 +17,10 @@
         </div>
         <nav id="navbar">
             <ul>
-                <li><img src="images/icons/house.svg">Accueil</li>
-                <li><img src="images/icons/accessibility.svg">Je rend visite</li>
-                <li><img src="images/icons/book-open.svg">Guide du partage</li>
-                <li><img src="images/icons/hand-helping.svg">Devenir bénévole</li>
+                <li><a href="#"><img src="images/icons/house.svg">Accueil</a></li>
+                <li><a href="#"><img src="images/icons/accessibility.svg">Je rend visite</a></li>
+                <li><a href="#"><img src="images/icons/book-open.svg">Guide du partage</a></li>
+                <li><a href="#"><img src="images/icons/hand-helping.svg">Devenir bénévole</a></li>
             </ul>
         </nav>
 
@@ -37,7 +37,19 @@
 
         </div>
 
-        <button id="searchBar">Rechercher</button>
+        <form id="form">
+            <div id="searchBlock">
+                <div>
+                    <label for="moment">Moment à partager :</label>
+                    <input type="text" class="input" name="inputMoment" required>
+                </div>
+                <div>
+                    <label for="localisation">Localisation :</label>
+                    <input type="text" class="input" name="inputLoc" required>
+                </div>
+                <button id="searchBar">Rechercher 🔎</button>
+            </div>
+        </form>
 
         <div id="meetPersonality">
 
@@ -69,22 +81,26 @@
 
             <ul id="blockMeet">
                 <li>
-                    <h2>Choississez une rencontre</h2>
+                    <div id="icon01">🔎</div>
+                    <h2> 1.Choississez une rencontre</h2>
                     <p>Parcourez les profils de nos aînés et trouvez la personne avec qui vous aimeriez partager un
                         moment chaleureux.</p>
                 </li>
                 <li>
-                    <h2>Remplissez le formulaire</h2>
+                    <div id="icon01">📝</div>
+                    <h2>2.Remplissez le formulaire</h2>
                     <p>Indiquez vos disponibilités et vos envies. Cela nous aide à organiser une rencontre adaptée et en
                         toute confiance.</p>
                 </li>
                 <li>
-                    <h2>Partagez un moment</h2>
+                    <div id="icon01">👋</div>
+                    <h2>3.Partagez un moment</h2>
                     <p>Rendez visite à la personne âgée dans un cadre bienveillant. Une discussion, une balade ou
                         simplement l'aider à une tâche ! Chaque moment compte.</p>
                 </li>
                 <li>
-                    <h2>Créez du lien</h2>
+                    <div id="icon01">💞</div>
+                    <h2>4.Créez du lien</h2>
                     <p>Si le courant passe, vous pouvez revenir ! Ensemble, tissons des liens durables et combattons
                         l'isolement pas à pas.</p>
 
@@ -109,40 +125,51 @@
         </div>
 
         <footer>
-            <div id=footerBlock>
-
-                <div>
-                    <h6>Adaence</h6>
-                    <p>Notre mission est de trouver des foyers aimants pour chaque animal abandonné et de promouvoir le
-                        bien-être animal.</p>
-                    </div>
-                <div>
-                    <h6>Informations utiles</h6>
-                    <ul>
-                        <li>FAQs</li>
-                        <li>Liste des activités</li>
-                        <li>Nous contacter</li>
-                        <li>Mentions légales</li>
-                    </ul>
-                </div>
-                <section>
-                    <h6>Contact</h6>
-                    <section>
-                        116 rue du Faubourg Saint-Martin<br>
-                        75010 Paris, France<br>
-                        <a href="mailto:contact@adaence.fr">contact@adaence.fr</a><br>
-                        <a href="tel:+33123456789">+33 1 23 45 67 89</a>
-                    </section>
-
-            </div>
-
             <div>
-                <p>@ Adaence. Tous droits réservés.</p>
-                <p>Ce site a été développé dans le cadre d'un projet pour ADA Tech School.</p>
+                <div id=footerBlock>
 
-            </div>
+                    <div class="footerColumn">
+                        <h5>Adaence</h5>
+                        <p>Notre mission est de trouver des foyers aimants pour chaque animal abandonné et de promouvoir
+                            le bien-être animal.</p>
+
+                        <div id="iconsMedia">
+                            <a href="#"><img src="images/icons/facebook.svg"></a>
+                            <a href="#"><img src="images/icons/instagram.svg"></a>
+                            <a href="#"><img src="images/icons/linkedin.svg"></a>
+                            <a href="#"><img src="images/icons/twitch.svg"></a>
+                        </div>
+                    </div>
+
+                    <div class="footerColumn">
+                        <h5>Informations utiles</h5>
+                        <ul>
+                            <li>FAQs</li>
+                            <li>Liste des activités</li>
+                            <li>Nous contacter</li>
+                            <li>Mentions légales</li>
+                        </ul>
+                    </div>
+                    <div class="footerColumn">
+                        <h5>Contact</h5>
+                        <div>
+                            116 rue du Faubourg Saint-Martin<br>
+                            75010 Paris, France<br>
+                            <a href="mailto:contact@adaence.fr">contact@adaence.fr</a><br>
+                            <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="copyright">
+                    <p>@ Adaence. Tous droits réservés.<br>
+                        Ce site a été développé dans le cadre d'un projet pour ADA Tech School.</p>
+
+                </div>
 
         </footer>
+
 
 
     </main>
