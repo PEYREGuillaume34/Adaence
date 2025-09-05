@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdaenceSearch</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../CSS/styleSearch.css">
+    <script defer src="../JS/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo" alt="adaence Logo">
+            🍵Ada<span class="blue">ence</span>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#"><img src="../images/icons/house.svg">Accueil</a></li>
+                <li><a href="#"><img src="../images/icons/accessibility.svg">Je rend visite</a></li>
+                <li><a href="#"><img src="../images/icons/book-open.svg">Guide du partage</a></li>
+                <li><a href="#"><img src="../images/icons/hand-helping.svg">Devenir bénévole</a></li>
+            </ul>
+        </nav>
+        <button>Faire un don 🫶</button>
+    </header>
+
+    <main id="searchPage">
+
+        <!-- Bloc recherche -->
+        <form id="form">
+            <div id="searchBlock">
+                <div>
+                    <label for="moment">Moment à partager :</label>
+                    <input type="text" class="input" name="inputMoment" required>
+                </div>
+                <div>
+                    <label for="localisation">Localisation :</label>
+                    <input type="text" class="input" name="inputLoc" required>
+                </div>
+                <button id="searchBar">Rechercher 🔎</button>
+            </div>
+        </form>
+
+        <!-- Grille de profils -->
+        <div id="profilsBlock">
+            <div id="franco">
+                <img src="../images/danie-franco-ClHY-KyvI1M-unsplash.jpg">
+                <p>Un café/thé</p>
+                <h4 id="prenom">Franco</h4>
+                <p>Ouvrier d'usine • 95 <br> Saint-Étienne<br><br>
+                    Franco adore raconter ses souvenirs de l’usine et partager un bon café avec les jeunes du quartier.
+                </p>
+                <button id="btnProfils">Programmer un moment</button>
+            </div>
+
+            <div id="soares">
+                <img src="../images/vladimir-soares-z_8Jqe0Cc-s-unsplash.jpg">
+                <p>Un repas</p>
+                <h4 id="prenom">Soares</h4>
+                <p>Puéricultrice • 84 <br>Angers<br><br>
+                    Soares a consacré sa vie aux tout-petits et aime aujourd’hui transmettre tendresse et conseils de
+                    vie.</p>
+                <button id="btnProfils">Programmer un moment</button>
+            </div>
+
+            <div id="tim">
+                <img src="../images/tim-mossholder-FRPbQvAwY10-unsplash.jpg">
+                <p>Une ballade</p>
+                <h4 id="prenom">Tim</h4>
+                <p>Facteur • 80 <br>Aurillac<br><br>
+                    Ancien facteur, Tim connaît chaque recoin de sa ville et adore les longues balades en bonne
+                    compagnie.</p>
+                <button id="btnProfils">Programmer un moment</button>
+            </div>
+
+            <div id="shimo">
+                <img src="../images/shimo-yann-7nTFrV1xQGE-unsplash.jpg">
+                <p>Un déjeuner</p>
+                <h4 id="prenom">Shimo</h4>
+                <p>Professeure • 94 <br>Besançon<br><br>
+                    Shimo a le coeur sur la main et des tas d’histoires passionnantes à raconter sur ses années
+                    d’enseignement.
+                </p>
+                <button id="btnProfils">Programmer un moment</button>
+            </div>
+
+            <div id="zanonn">
+                <img src="../images/tatiana-zanon-MMhazsT2wtM-unsplash.jpg">
+                <p>Une sortie culturelle</p>
+                <h4 id="prenom">Zanonn</h4>
+                <p>Journaliste • 86 <br>Paris<br><br>
+                    Zanon est curieuse du monde et adore échanger autour d’un bon livre ou d’un article d’actualité.</p>
+                <button id="btnProfils">Programmer un moment</button>
+            </div>
+
+            <div id="matveev">
+                <img src="../images/michael-matveev-Bk8zT4gLLt0-unsplash.jpg">
+                <p>Une sortie culturelle</p>
+                <h4 id="prenom">Matveev</h4>
+                <p>Pilote d'avion • 77 <br>Toulouse<br><br>
+                    Pilote à la retraite, Matveev a mille anecdotes à partager sur ses voyages aux quatre coins du
+                    monde.</p>
+                <button id="btnProfils">Programmer un moment</button>
+            </div>
+
+            <div id="mahe">
+                <img src="../images/quentin-mahe-a6jCS61X1Hg-unsplash.jpg">
+                <p>Autre activité</p>
+                <h4 id="prenom">Mahe</h4>
+                <p>Mecanicienne • 93 <br>Le Mans<br><br>
+                    Mahe a les mains d’or et le sourire généreux. Elle aime parler de mécanique, mais surtout de lien
+                    humain.</p>
+                <button id="btnProfils">Programmer un moment</button>
+            </div>
+
+            <div id="samir">
+                <img src="../images/mohammad-samir-huHXKc_usoA-unsplash.jpg">
+                <p>Un repas</p>
+                <h4 id="prenom">Samir</h4>
+                <p>Musicien • 82 <br>Lyon<br><br>
+                    Musicien passionné, Samir aime improviser quelques notes et créer des moments chaleureux avec les
+                    jeunes.</p>
+                <button id="btnProfils">Programmer un moment</button>
+            </div>
+        </div>
+
+        <!-- Bloc Footer -->
+        <footer>
+            <div id="footerBlock">
+                <div class="footerColumn">
+                    <h5>Adaence</h5>
+                    <p>Notre mission est de trouver des foyers aimants pour chaque animal abandonné et de promouvoir
+                        le bien-être animal.</p>
+                    <div id="iconsMedia">
+                        <a href="#"><img src="../images/icons/facebook.svg"></a>
+                        <a href="#"><img src="../images/icons/instagram.svg"></a>
+                        <a href="#"><img src="../images/icons/linkedin.svg"></a>
+                        <a href="#"><img src="../images/icons/twitch.svg"></a>
+                    </div>
+                </div>
+                <div class="footerColumn">
+                    <h5>Informations utiles</h5>
+                    <ul>
+                        <li>FAQs</li>
+                        <li>Liste des activités</li>
+                        <li>Nous contacter</li>
+                        <li>Mentions légales</li>
+                    </ul>
+                </div>
+                <div class="footerColumn">
+                    <h5>Contact</h5>
+                    <div>
+                        116 rue du Faubourg Saint-Martin<br>
+                        75010 Paris, France<br>
+                        <a href="mailto:contact@adaence.fr">contact@adaence.fr</a><br>
+                        <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                    </div>
+                </div>
+            </div>
+            <div id="copyright">
+                <p>@ Adaence. Tous droits réservés.<br>
+                    Ce site a été développé dans le cadre d'un projet pour ADA Tech School.</p>
+            </div>
+        </footer>
+
+    </main>
+</body>
+
+</html>
