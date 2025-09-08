@@ -17,13 +17,13 @@
         </div>
         <nav id="navbar">
             <ul>
-                <li><a href="#"><img src="images/icons/house.svg">Accueil</a></li>
-                <li><a href="#"><img src="images/icons/accessibility.svg">Je rend visite</a></li>
-                <li><a href="#"><img src="images/icons/book-open.svg">Guide du partage</a></li>
-                <li><a href="#"><img src="images/icons/hand-helping.svg">Devenir bénévole</a></li>
+                <li class="accIcons"><a href="index.html"><img src="images/icons/house.svg">Accueil</a></li>
+                <li class="jerIcons"><a href="Pages/pageProfils.html"><img src="images/icons/accessibility.svg">Je
+                        rend visite</a></li>
+                <li class="guidIcons"><a href="#"><img src="images/icons/book-open.svg">Guide du partage</a></li>
+                <li class="devIcons"><a href="#"><img src="images/icons/hand-helping.svg">Devenir bénévole</a></li>
             </ul>
         </nav>
-
         <button>Faire un don 🫶</button>
 
     </header>
@@ -37,19 +37,28 @@
 
         </div>
 
-        <form id="form">
-            <div id="searchBlock">
-                <div>
-                    <label for="moment">Moment à partager :</label>
-                    <input type="text" class="input" name="inputMoment" required>
+        <div id="formInitBlock">
+            <form id="form">
+                <div id="searchBlock">
+                    <div>
+                        <label for="moment">Moment à partager :</label>
+                        <select class="activity-type">
+                            <option value="all">Tous les moments possibles</option>
+                            <option value="meal">Un repas</option>
+                            <option value="teatime">Un café/thé</option>
+                            <option value="culture">Une sortie culturelle</option>
+                            <option value="walk">Une ballade</option>
+                            <option value="other">Autre activité</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="localisation">Localisation :</label>
+                        <input type="text" class="loc" placeholder=" Votre Ville" name="inputLoc" required>
+                    </div>
+                    <button id="searchBar">Rechercher 🔎</button>
                 </div>
-                <div>
-                    <label for="localisation">Localisation :</label>
-                    <input type="text" class="input" name="inputLoc" required>
-                </div>
-                <button id="searchBar">Rechercher 🔎</button>
-            </div>
-        </form>
+            </form>
+        </div>
 
         <div id="meetPersonality">
 

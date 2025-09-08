@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdaenceSearch</title>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.ico">
-    <link rel="stylesheet" href="../CSS/styleSearch.css">
+    <link rel="stylesheet" href="../CSS/styleProfils.css">
     <script defer src="../JS/script.js"></script>
 </head>
 
@@ -17,10 +17,10 @@
         </div>
         <nav id="navbar">
             <ul>
-                <li><a href="#"><img src="../images/icons/house.svg">Accueil</a></li>
-                <li><a href="#"><img src="../images/icons/accessibility.svg">Je rend visite</a></li>
-                <li><a href="#"><img src="../images/icons/book-open.svg">Guide du partage</a></li>
-                <li><a href="#"><img src="../images/icons/hand-helping.svg">Devenir bénévole</a></li>
+                <li class="accIcons"><a href="../index.html"><img src="../images/icons/house.svg">Accueil</a></li>
+                <li class="jerIcons"><a href="pageProfils.html"><img src="../images/icons/accessibility.svg">Je rend visite</a></li>
+                <li class="guidIcons"><a href="#"><img src="../images/icons/book-open.svg">Guide du partage</a></li>
+                <li class="devIcons"><a href="#"><img src="../images/icons/hand-helping.svg">Devenir bénévole</a></li>
             </ul>
         </nav>
         <button>Faire un don 🫶</button>
@@ -29,19 +29,35 @@
     <main id="searchPage">
 
         <!-- Bloc recherche -->
-        <form id="form">
-            <div id="searchBlock">
-                <div>
-                    <label for="moment">Moment à partager :</label>
-                    <input type="text" class="input" name="inputMoment" required>
+        <div id="formInitBlock">
+            <form id="form">
+                <div id="searchBlock">
+                    <div>
+                        <label for="moment">Moment à partager :</label>
+                        <select class="activity-type">
+                            <option value="all">Tous les moments possibles</option>
+                            <option value="meal">Un repas</option>
+                            <option value="teatime">Un café/thé</option>
+                            <option value="culture">Une sortie culturelle</option>
+                            <option value="walk">Une ballade</option>
+                            <option value="other">Autre activité</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="localisation">Localisation :</label>
+                        <input type="text" class="loc" placeholder=" Votre Ville" name="inputLoc" required>
+                    </div>
+                    <button id="searchBar">Rechercher 🔎</button>
                 </div>
-                <div>
-                    <label for="localisation">Localisation :</label>
-                    <input type="text" class="input" name="inputLoc" required>
-                </div>
-                <button id="searchBar">Rechercher 🔎</button>
+            </form>
+
+            <div id="reinit">
+                <div id="momentsCount">8 moments trouvés</div>
+                <a href="search.html">Réinitialiser les filtres</a>
             </div>
-        </form>
+        </div>
+
+
 
         <!-- Grille de profils -->
         <div id="profilsBlock">
@@ -125,6 +141,15 @@
                 <button id="btnProfils">Programmer un moment</button>
             </div>
         </div>
+
+        <div id="pagination">
+            <button class="btnPage1">1</button>
+            <button class="btnPage2">2</button>
+            <button class="btnPage3">3</button>
+            <button class="suivant">Suivant </button>
+
+        </div>
+
 
         <!-- Bloc Footer -->
         <footer>
