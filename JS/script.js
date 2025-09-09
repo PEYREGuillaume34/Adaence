@@ -1,17 +1,37 @@
-
-// const btnAccueil = document.getElementsByClassName("accIcons");
-// const btnJeRends = document.getElementById("jerIcons");
-
-
-// if (btnAccueil) {
-//   btnAccueil.addEventListener("click", () => {
-//     console.log("Tu es sur la page d'accueil !");
-//   });
-// }
+const profilsBlock = document.getElementById("profilsBlock");
+const form = document.getElementById("form");
+const momentInput = document.querySelector(".activity-type");
+const cityInput = document.querySelector(".loc");
+const momentsCount = document.getElementById("momentsCount");
 
 
-// if (btnJeRends) {
-//   btnJeRends.addEventListener("click", () => {
-//     console.log("Tu es sur la page profil !");
-//   });
-// }
+fetch('../data/data.json')
+    .then(response => response.json())
+    .then(data => {
+
+        console.log("je suis", data)
+
+        for (const profile of data) {
+            profilsBlock.innerHTML += `
+                <div id="${profile.firstname}" class="profile-card">
+                    <img src="${profile.imageUrl}">
+                    <p>${profile.type}</p>
+                    <h4>${profile.firstname}</h4>
+                    <p>${profile.job} • ${profile.age} <br> ${profile.city}</p>
+                    <p>${profile.description}</p>
+                    <button id="btnProfils">Programmer un moment</button>
+                </div>`
+            console.log(`je voudrais partager ce moment ${profile.type}`)
+            console.log(`mon job est ${profile.job}`)
+        }
+    })
+
+
+
+
+
+
+
+
+
+
