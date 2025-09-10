@@ -130,6 +130,7 @@ p {
 /* ---------- SEARCH ---------- */
 
 #formInitBlock{
+    position:relative;
     padding: 2.5rem 2rem;
     background-color: white;
     box-shadow: var(--shadow-md);
@@ -138,6 +139,7 @@ p {
     margin-bottom: 2rem;
     max-width: 900px;
     border-radius: 1em;
+    margin-top: -80px;
 
 }
 
@@ -358,6 +360,8 @@ footer {
   text-align: left;
   line-height: 1.5rem;
 }
+
+
 
 .footerColumn a {
   color: white;
