@@ -10,4 +10,7 @@ Lundi 8 Septembre :
     -Les blocs pour la paginations sont créés, ainsi que leur CSS
 
 Mardi 9 Septembre
-    -
+    -Affichage des profils en dynamique via .JS
+    -Filtrer la recherche des informations dans le json pour la searchBar
+    -Remis la SearchBar par dessus la photo sur la page d'accueil
+    -Essayé de trouver comment enlever la padding sur le <ul> dans le footer

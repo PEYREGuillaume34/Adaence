@@ -43,7 +43,7 @@ form.addEventListener("submit", (event) => {
             }
 
             // Mettre à jour le compteur
-            momentsCount.textContent = filtered.length;
+            
             momentsCount.innerText = `${filtered.length} moments trouvés`;
         return;
         });
