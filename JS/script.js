@@ -34,14 +34,11 @@ if (profilsBlock && window.location.pathname.endsWith("pageProfils.html")) {
     fetch(dataPath)
       .then((response) => response.json())
       .then((data) => {
-        const filtered = data.filter((profile) => {
-          const matchMoment =
-            activityParam === "all" ||
-            profile.type.toLowerCase() === activityParam.toLowerCase();
-          const matchCity =
-            locationParam === "all" ||
-            profile.city.toLowerCase() === locationParam.toLowerCase();
-          return matchMoment && matchCity;
+        const filtered = data.filter(profile => {
+          return (
+            (activityParam === "all" || profile.type.toLowerCase() === activityParam.toLowerCase()) &&
+            (locationParam === "all" || profile.city.toLowerCase() === locationParam.toLowerCase())
+          );
         });
 
         profilsBlock.innerHTML = "";
@@ -82,7 +79,7 @@ if (profilsBlock && window.location.pathname.endsWith("pageProfils.html")) {
         document.querySelector('.error-message').style.display = 'block';
       } else {
         window.location.href = `pageProfils.html?activity=${moment}&location=${city}`;
-       
+
       }
     });
   }
