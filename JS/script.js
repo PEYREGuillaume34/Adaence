@@ -69,6 +69,26 @@ if (profilsBlock && window.location.pathname.endsWith("pageProfils.html")) {
 
   // exécution au chargement
   afficherProfils();
+
+
+  function clickBtnSearch() {
+    document.querySelector('#searchBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+
+      let moment = document.querySelector(".activity-type").value;
+      let city = document.querySelector(".loc").value;
+
+      if (city.length === 0) {
+        document.querySelector('.error-message').style.display = 'block';
+      } else {
+        window.location.href = `pageProfils.html?activity=${moment}&location=${city}`;
+       
+      }
+    });
+  }
+
+  clickBtnSearch()
+
 }
 
 
