@@ -1,61 +1,107 @@
+// chemin vers ton fichier JSON
+const dataPath = "../data/data.json";
+
+// ===============
+// PAGE ACCUEIL
+// ===============
+const searchForm = document.getElementById("form");
+if (searchForm && window.location.pathname.endsWith("index.html")) {
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const moment = document.querySelector(".activity-type").value;
+    const city = document.querySelector(".loc").value;
+
+    // redirection avec paramètres dans l'URL
+    window.location.href = `pages/pageProfils.html?activity=${encodeURIComponent(moment)}&location=${encodeURIComponent(city)}`;
+  });
+}
+
+// ===============
+// PAGE PROFILS
+// ===============
 const profilsBlock = document.getElementById("profilsBlock");
-const form = document.getElementById("form");
-const momentInput = document.querySelector(".activity-type");
-const cityInput = document.querySelector(".loc");
-const momentsCount = document.getElementById("momentsCount");
+if (profilsBlock && window.location.pathname.endsWith("pageProfils.html")) {
+  const momentsCount = document.getElementById("momentsCount");
 
+  // lire les paramètres de l’URL
+  const params = new URLSearchParams(window.location.search);
+  const activityParam = params.get("activity") || "all";
+  const locationParam = params.get("location") || "all";
 
-// Déterminer le bon chemin vers data.json selon la page
-let dataPath = "./data/data.json"; // par défaut (index.html à la racine)
-if (window.location.pathname.includes("Pages")) {
-    dataPath = "../data/data.json"; // si on est dans /Pages/pageProfils.html
+  // fonction pour charger et filtrer les profils
+  function afficherProfils() {
+    fetch(dataPath)
+      .then((response) => response.json())
+      .then((data) => {
+        const filtered = data.filter((profile) => {
+          const matchMoment =
+            activityParam === "all" ||
+            profile.type.toLowerCase() === activityParam.toLowerCase();
+          const matchCity =
+            locationParam === "all" ||
+            profile.city.toLowerCase() === locationParam.toLowerCase();
+          return matchMoment && matchCity;
+        });
+
+        profilsBlock.innerHTML = "";
+
+        if (filtered.length === 0) {
+          profilsBlock.innerHTML = "<p>Aucun profil trouvé.</p>";
+        } else {
+          for (const profile of filtered) {
+            profilsBlock.innerHTML += `
+              <div class="profile-card">
+                <img src="${profile.imageUrl}">
+                <p>${profile.type}</p>
+                <h4>${profile.firstname}</h4>
+                <p>${profile.job} • ${profile.age} <br> ${profile.city}</p>
+                <p>${profile.description}</p>
+                <button class="btnProfils">Programmer un moment</button>
+              </div>`;
+          }
+        }
+
+        // mettre à jour le compteur
+        momentsCount.innerText = `${filtered.length} moments trouvés`;
+      });
+  }
+
+  // exécution au chargement
+  afficherProfils();
 }
 
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    profilsBlock.innerHTML = "";
-
-    const moment = momentInput.value.toLowerCase();
-    const city = cityInput.value.toLowerCase();
-
-
-    fetch(dataPath)
-        .then(response => response.json())
-        .then(data => {
-            const filtered = data.filter(profile => {
-                const matchMoment = moment === "all" || profile.type.toLowerCase() === moment;
-                const matchCity = city === "all" || profile.city.toLowerCase() === city;
-                return matchMoment && matchCity;
-            });
-
-            // Afficher le résultat filtré
-            for (const profile of filtered) {
-                profilsBlock.innerHTML += `
-          <div id="${profile.firstname}" class="profile-card">
-              <img src="${profile.imageUrl}">
-              <p>${profile.type}</p>
-              <h4>${profile.firstname}</h4>
-              <p>${profile.job} • ${profile.age} <br> ${profile.city}</p>
-              <p>${profile.description}</p>
-              <button id="btnProfils">Programmer un moment</button>
-          </div>`;
-            }
-
-            // Mettre à jour le compteur
-            
-            momentsCount.innerText = `${filtered.length} moments trouvés`;
-        return;
-        });
-});
 
 
 
+// const profilsBlock = document.getElementById("profilsBlock");
+// const form = document.getElementById("form");
+// const momentInput = document.querySelector(".activity-type");
+// const cityInput = document.querySelector(".loc");
+// const momentsCount = document.getElementById("momentsCount");
 
+// fetch('../data/data.json')
+//   .then(response => response.json())
+//   .then(data => {
+//     const profiles = data;
+//     console.log("je suis", data);
 
+//     profilsBlock.innerHTML = "";
 
+//     for (const profile of profiles) {
+//       profilsBlock.innerHTML += `
+//         <div id="${profile.firstname.toLowerCase()}" class="profile-card">
+//           <img src="${profile.imageUrl}" alt="${profile.firstname}">
+//           <p>${profile.type}</p>
+//           <h4>${profile.firstname}</h4>
+//           <p>${profile.job} • ${profile.age} <br> ${profile.city}</p>
+//           <p>${profile.description}</p>
+//           <button class="btnProfils">Programmer un moment</button>
+//         </div>
+//       `;
+//     }
 
-
-
-
-
+//     // console.log montre tout le contenu final
+//     console.log("je m'appelle", profilsBlock.innerHTML);
+//   })

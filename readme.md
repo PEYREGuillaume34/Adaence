@@ -14,3 +14,7 @@ Mardi 9 Septembre
     -Filtrer la recherche des informations dans le json pour la searchBar
     -Remis la SearchBar par dessus la photo sur la page d'accueil
     -Essayé de trouver comment enlever la padding sur le <ul> dans le footer
+
+Mercredi 10 Septembre
+    - Objectif URLSearchParams, mais problème d'utilisation.
+    J'ai du mal à faire le lien entre les deux searchBar, le lien est fait la mais la searchBar de la pageProfils ne fonctionne pas.

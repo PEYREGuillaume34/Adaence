@@ -201,7 +201,7 @@ p {
     padding-bottom: 1em;
 }
 
-#btnProfils {
+.btnProfils {
     border-radius: 50px;
     padding: 0.7rem 1.5rem;
     background-color: var(--btn-primary-bg);
@@ -339,3 +339,4 @@ li {
   background-color: var(--secondary-color);
   color: white;
 }
+
