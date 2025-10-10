@@ -49,7 +49,7 @@ if (profilsBlock && window.location.pathname.endsWith("pageProfils.html")) {
           for (const profile of filtered) {
             profilsBlock.innerHTML += `
               <div class="profile-card">
-                <img src="${profile.imageUrl}">
+                <img src="${profile.imageUrl}" alt="vieuxUno">
                 <p>${profile.type}</p>
                 <h4>${profile.firstname}</h4>
                 <p>${profile.job} • ${profile.age} <br> ${profile.city}</p>
