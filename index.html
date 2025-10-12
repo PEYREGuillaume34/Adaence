@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaence</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.ico">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script defer src="JS/script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo" alt="adaence Logo">
+            🍵Ada<span class="blue">ence</span>
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li class="accIcons"><a href="index.html"><img src="images/icons/house.svg">Accueil</a></li>
+                <li class="jerIcons"><a href="pages/pageProfils.html"><img src="images/icons/accessibility.svg">Je
+                        rend visite</a></li>
+                <li class="guidIcons"><a href="#"><img src="images/icons/book-open.svg">Guide du partage</a></li>
+                <li class="devIcons"><a href="#"><img src="images/icons/hand-helping.svg">Devenir bénévole</a></li>
+            </ul>
+        </nav>
+        <button>Faire un don 🫶</button>
+
+    </header>
+
+    <main id="accueilPage">
+
+        <div id="heroLinks">
+            <h1 class="firstTitle">Rétablissons les liens</h1>
+            <p>Et si vous offriez un peu de votre temps à ceux qui en ont le plus besoin ? Prenez rendez-vous pour
+                partager un moment avec une personne âgée isolée.</p>
+
+        </div>
+
+        <div id="formInitBlock">
+            <form id="form" method="GET" action="pages/pageProfils.html">
+                <div id="searchBlock">
+                    <div>
+                        <label for="moment">Moment à partager :</label>
+                        <select class="activity-type">
+                            <option value="all">Tous les moments possibles</option>
+                            <option value="Un repas">Un repas</option>
+                            <option value="Un café/thé">Un café/thé</option>
+                            <option value="Une sortie culturelle">Une sortie culturelle</option>
+                            <option value="Une promenade">Une ballade</option>
+                            <option value="Autre activité">Autre activité</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="localisation">Localisation :</label>
+                        <input type="text" class="loc" placeholder=" Votre Ville" name="inputLoc" required>
+                    </div>
+                    <button type="submit" id="searchBtn" >Rechercher 🔎</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="meetPersonality">
+
+            <h1 class="secondTitle">Les personnalités à rencontrer</h1>
+            <p>Feuilletez les visages de celles et ceux qui attendent simplement un peu de votre temps.
+                Chaque sourire porte une histoire, chaque rencontre est une promesse.</p>
+
+            <div id="photosBlock">
+                <img class="danie" src="images/danie-franco-ClHY-KyvI1M-unsplash.jpg">
+                <img class="vlad" src="images/vladimir-soares-z_8Jqe0Cc-s-unsplash.jpg">
+                <img class="tim" src="images/tim-mossholder-FRPbQvAwY10-unsplash.jpg">
+                <img class="shimo" src="images/shimo-yann-7nTFrV1xQGE-unsplash.jpg">
+                <img class="tatiana" src="images/tatiana-zanon-MMhazsT2wtM-unsplash.jpg">
+                <img class="michael" src="images/michael-matveev-Bk8zT4gLLt0-unsplash.jpg">
+                <img class="quentin" src="images/quentin-mahe-a6jCS61X1Hg-unsplash.jpg" alt="">
+                <img class="moha" src="images/mohammad-samir-huHXKc_usoA-unsplash.jpg">
+
+            </div>
+
+            <button id="btnProfils">Voir tous les profils</button>
+
+        </div>
+
+        <div id="doesItWork">
+
+            <h1 class="thirdTitle">Comment ça marche</h1>
+            <p>Offrir un peu de votre temps, c'est offrir beaucoup.
+                Découvrez comment planifier une visite en toute simplicité.</p>
+
+            <ul id="blockMeet">
+                <li>
+                    <div id="icon01">🔎</div>
+                    <h2> 1.Choississez une rencontre</h2>
+                    <p>Parcourez les profils de nos aînés et trouvez la personne avec qui vous aimeriez partager un
+                        moment chaleureux.</p>
+                </li>
+                <li>
+                    <div id="icon01">📝</div>
+                    <h2>2.Remplissez le formulaire</h2>
+                    <p>Indiquez vos disponibilités et vos envies. Cela nous aide à organiser une rencontre adaptée et en
+                        toute confiance.</p>
+                </li>
+                <li>
+                    <div id="icon01">👋</div>
+                    <h2>3.Partagez un moment</h2>
+                    <p>Rendez visite à la personne âgée dans un cadre bienveillant. Une discussion, une balade ou
+                        simplement l'aider à une tâche ! Chaque moment compte.</p>
+                </li>
+                <li>
+                    <div id="icon01">💞</div>
+                    <h2>4.Créez du lien</h2>
+                    <p>Si le courant passe, vous pouvez revenir ! Ensemble, tissons des liens durables et combattons
+                        l'isolement pas à pas.</p>
+
+                </li>
+
+            </ul>
+
+        </div>
+        <div id="cta">
+            <h1 class="fourTitle">Prêt⸱e à faire la différence ?</h1>
+            <p>Offrez un peu de votre temps, partagez un moment, créez du lien... Chaque présence compte. En tendant
+                la main à une personne âgée, vous lui offrez bien plus qu'une visite : une vraie bouffée de chaleur
+                humaine.</p>
+
+            <section id="threeBtn">
+                <button id="programBtn">Programmez une visite</button>
+                <button id="donBtn">Faire un don 🫶</button>
+                <button id="volunteerBtn">Devenir bénévole</button>
+
+            </section>
+
+        </div>
+
+        <footer>
+            <div>
+                <div id=footerBlock>
+
+                    <div class="footerColumn">
+                        <h5>Adaence</h5>
+                        <p>Notre mission est de trouver des foyers aimants pour chaque animal abandonné et de promouvoir
+                            le bien-être animal.</p>
+
+                        <div id="iconsMedia">
+                            <a href="#"><img src="images/icons/facebook.svg"></a>
+                            <a href="#"><img src="images/icons/instagram.svg"></a>
+                            <a href="#"><img src="images/icons/linkedin.svg"></a>
+                            <a href="#"><img src="images/icons/twitch.svg"></a>
+                        </div>
+                    </div>
+
+                    <div class="footerColumn">
+                        <h5>Informations utiles</h5>
+                        <ul>
+                            <li>FAQs</li>
+                            <li>Liste des activités</li>
+                            <li>Nous contacter</li>
+                            <li>Mentions légales</li>
+                        </ul>
+                    </div>
+                    <div class="footerColumn">
+                        <h5>Contact</h5>
+                        <div>
+                            116 rue du Faubourg Saint-Martin<br>
+                            75010 Paris, France<br>
+                            <a href="mailto:contact@adaence.fr">contact@adaence.fr</a><br>
+                            <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="copyright">
+                    <p>@ Adaence. Tous droits réservés.<br>
+                        Ce site a été développé dans le cadre d'un projet pour ADA Tech School.</p>
+
+                </div>
+
+        </footer>
+
+
+
+    </main>
+
+</body>
+
+</html>
