@@ -89,6 +89,19 @@ if (profilsBlock && window.location.pathname.endsWith("pageProfils.html")) {
 }
 
 
+// --- NAVBAR BURGER ---
+document.addEventListener("DOMContentLoaded", () => {
+  const navToggle = document.querySelector(".nav-toggle");
+  const navbar = document.getElementById("navbar");
+
+  if (navToggle && navbar) {
+    navToggle.addEventListener("click", () => {
+      navbar.classList.toggle("open");
+    });
+  }
+});
+
+
 
 
 

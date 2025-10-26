@@ -340,3 +340,70 @@ li {
   color: white;
 }
 
+/* ---------- NAVBAR RESPONSIVE ---------- */
+
+/* ---------- NAVBAR MOBILE STRUCTURE ---------- */
+@media (max-width: 768px) {
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    padding: 1.5em 2em;
+  }
+
+  /* Ligne du haut : logo + burger côte à côte */
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Logo reste normal */
+  .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+
+  /* Bouton burger visible à droite du logo */
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--heading-color);
+    cursor: pointer;
+  }
+
+  /* Bouton “Faire un don” en dessous, centré et large */
+  header button:not(.nav-toggle) {
+    align-self: center;
+    width: 80%;
+    margin-top: 0.3rem;
+  }
+
+  /* Menu replié */
+  #navbar {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow-md);
+    margin-top: 1rem;
+    padding: 1rem 0;
+  }
+
+  #navbar.open {
+    display: flex;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+  }
+}
