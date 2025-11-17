@@ -36,53 +36,99 @@ body {
 /* ---------- HEADER ---------- */
 
 header {
-    display: flex;
-    margin: auto;
-    padding: 4em 6em 2em 6em;
-    margin-bottom: 2rem;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  background-color: white;
+  box-shadow: var(--shadow-md);
 }
 
+
+
 .logo {
-    font-weight: bold;
-    font-size: 2rem;
+  font-weight: bold;
+  font-size: 1.6rem;
 }
 
 .logo span {
-    color: var(--secondary-color);
+  color: var(--secondary-color);
 }
 
 #navbar {
-    display: flex;
-    font-weight: bold;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 #navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 60px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
 
-    a {
-        text-decoration: none;
-        color: var(--heading-color);
-    }
+#navbar ul a {
+  text-decoration: none;
+  color: var(--heading-color);
+  font-weight: bold;
 }
 
 header button {
-    padding: 0.7em 2em;
-    border-radius: 15em;
-    border: none;
-    background-color: var(--secondary-color);
-    color: var(--light-color);
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1.2em
+  padding: 0.7em 2em;
+  border-radius: 15em;
+  border: none;
+  background-color: var(--secondary-color);
+  color: var(--light-color);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2em;
+  width: 100%;
 }
+
+/* Version Desktop */
+@media (min-width: 769px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4em 6em 2em 6em;
+  }
+
+  .headerTop {
+    width: auto;
+    flex: 1;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  #navbar {
+    flex: 1;
+    justify-content: center;
+  }
+
+  #navbar ul {
+    flex-direction: row;
+    gap: 40px;
+    width: auto;
+  }
+
+  header button {
+    width: auto;
+    flex: 1;
+    max-width: fit-content;
+    margin-left: auto;
+  }
+}
+
 
 /* ---------- TITRES & TEXTE ---------- */
 
@@ -340,70 +386,3 @@ li {
   color: white;
 }
 
-/* ---------- NAVBAR RESPONSIVE ---------- */
-
-/* ---------- NAVBAR MOBILE STRUCTURE ---------- */
-@media (max-width: 768px) {
-
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    padding: 1.5em 2em;
-  }
-
-  /* Ligne du haut : logo + burger côte à côte */
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  /* Logo reste normal */
-  .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-
-  /* Bouton burger visible à droite du logo */
-  .nav-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--heading-color);
-    cursor: pointer;
-  }
-
-  /* Bouton “Faire un don” en dessous, centré et large */
-  header button:not(.nav-toggle) {
-    align-self: center;
-    width: 80%;
-    margin-top: 0.3rem;
-  }
-
-  /* Menu replié */
-  #navbar {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
-    margin-top: 1rem;
-    padding: 1rem 0;
-  }
-
-  #navbar.open {
-    display: flex;
-  }
-
-  #navbar ul {
-    flex-direction: column;
-    gap: 20px;
-    padding: 0;
-  }
-}

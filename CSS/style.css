@@ -38,42 +38,50 @@ body {
 
 header {
   display: flex;
-  margin: auto;
-  max-width: var(--container-width);
-  padding: 1rem;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: var(--container-width);
 }
+
+
 
 .logo {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .logo span {
   color: var(--secondary-color);
 }
 
+/* Menu en colonne sur mobile */
 #navbar {
-    display: flex;
-    font-weight: bold;
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 #navbar ul {
-    display: flex;
-    list-style: none;
-    gap: 60px;
-    margin: 0;
-    padding: 0;
-
-    a {
-        text-decoration: none;
-        color: var(--heading-color);
-    }
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
 }
 
+#navbar ul a {
+  text-decoration: none;
+  color: var(--heading-color);
+  font-weight: bold;
+}
 
-header button {
+header > button {
   padding: 0.7em 2em;
   border-radius: 15em;
   border: none;
@@ -81,7 +89,45 @@ header button {
   color: var(--light-color);
   cursor: pointer;
   font-weight: bold;
-  font-size: 1.2em
+  font-size: 1.2em;
+  width: 100%;
+}
+
+/* Version Desktop */
+@media (min-width: 769px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .headerTop {
+    width: auto;
+    flex: 1;
+  }
+
+  .logo {
+    font-size: 2rem;
+  }
+
+  #navbar {
+    flex: 1;
+    justify-content: center;
+  }
+
+  #navbar ul {
+    flex-direction: row;
+    gap: 40px;
+    width: auto;
+  }
+
+  header > button {
+    width: auto;
+    flex: 1;
+    max-width: fit-content;
+    margin-left: auto;
+  }
 }
 
 /* ---------- TITRES & TEXTE ---------- */
@@ -281,6 +327,7 @@ p {
 #blockMeet li {
   display: flex;
   flex-direction: column;
+  align-items: center; /* ← Ajout pour centrer */
   padding: 2rem;
   background-color: white;
   border-radius: 10px;
@@ -290,6 +337,7 @@ p {
 #blockMeet li div {
   font-size: 3.5rem;
   margin-bottom: 2rem;
+  text-align: center; /* ← Ajout pour centrer */
 }
 
 /* ---------- CTA ---------- */
@@ -412,72 +460,4 @@ li {
   padding: 1.5rem 0;
 }
 
-
-/* ---------- NAVBAR RESPONSIVE ---------- */
-
-/* ---------- NAVBAR MOBILE STRUCTURE ---------- */
-@media (max-width: 768px) {
-
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.5rem;
-    padding: 1.5em 2em;
-  }
-
-  /* Ligne du haut : logo + burger côte à côte */
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-
-  /* Logo reste normal */
-  .logo {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
-
-  /* Bouton burger visible à droite du logo */
-  .nav-toggle {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    color: var(--heading-color);
-    cursor: pointer;
-  }
-
-  /* Bouton “Faire un don” en dessous, centré et large */
-  header button:not(.nav-toggle) {
-    align-self: center;
-    width: 80%;
-    margin-top: 0.3rem;
-  }
-
-  /* Menu replié */
-  #navbar {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: var(--shadow-md);
-    margin-top: 1rem;
-    padding: 1rem 0;
-  }
-
-  #navbar.open {
-    display: flex;
-  }
-
-  #navbar ul {
-    flex-direction: column;
-    gap: 20px;
-    padding: 0;
-  }
-}
 

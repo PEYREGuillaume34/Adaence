@@ -24,7 +24,7 @@ const profilsBlock = document.getElementById("profilsBlock");
 if (profilsBlock && window.location.pathname.endsWith("pageProfils.html")) {
   const momentsCount = document.getElementById("momentsCount");
 
-  // lire les paramètres de l’URL
+  // lire les paramètres de l'URL
   const params = new URLSearchParams(window.location.search);
   const activityParam = params.get("activity") || "all";
   const locationParam = params.get("location") || "all";
@@ -67,7 +67,6 @@ if (profilsBlock && window.location.pathname.endsWith("pageProfils.html")) {
   // exécution au chargement
   afficherProfils();
 
-
   function clickBtnSearch() {
     document.querySelector('#searchBtn').addEventListener('click', (e) => {
       e.preventDefault();
@@ -79,59 +78,9 @@ if (profilsBlock && window.location.pathname.endsWith("pageProfils.html")) {
         document.querySelector('.error-message').style.display = 'block';
       } else {
         window.location.href = `pageProfils.html?activity=${moment}&location=${city}`;
-
       }
     });
   }
 
   clickBtnSearch()
-
 }
-
-
-// --- NAVBAR BURGER ---
-document.addEventListener("DOMContentLoaded", () => {
-  const navToggle = document.querySelector(".nav-toggle");
-  const navbar = document.getElementById("navbar");
-
-  if (navToggle && navbar) {
-    navToggle.addEventListener("click", () => {
-      navbar.classList.toggle("open");
-    });
-  }
-});
-
-
-
-
-
-// const profilsBlock = document.getElementById("profilsBlock");
-// const form = document.getElementById("form");
-// const momentInput = document.querySelector(".activity-type");
-// const cityInput = document.querySelector(".loc");
-// const momentsCount = document.getElementById("momentsCount");
-
-// fetch('../data/data.json')
-//   .then(response => response.json())
-//   .then(data => {
-//     const profiles = data;
-//     console.log("je suis", data);
-
-//     profilsBlock.innerHTML = "";
-
-//     for (const profile of profiles) {
-//       profilsBlock.innerHTML += `
-//         <div id="${profile.firstname.toLowerCase()}" class="profile-card">
-//           <img src="${profile.imageUrl}" alt="${profile.firstname}">
-//           <p>${profile.type}</p>
-//           <h4>${profile.firstname}</h4>
-//           <p>${profile.job} • ${profile.age} <br> ${profile.city}</p>
-//           <p>${profile.description}</p>
-//           <button class="btnProfils">Programmer un moment</button>
-//         </div>
-//       `;
-//     }
-
-//     // console.log montre tout le contenu final
-//     console.log("je m'appelle", profilsBlock.innerHTML);
-//   })
